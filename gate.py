@@ -37,7 +37,6 @@ def gate_request(uri=None, method="GET", headers={}, data={}, params={}):
     if method == 'GET':
         response = requests.get(url, params=params, headers=headers, verify=config.verify, cert=config.cert)
     elif method == 'POST':
-        print(data)
         response = requests.post(url, data=data, headers=headers, verify=config.verify, cert=config.cert)
     elif method == 'DELETE':
         response = requests.delete(url, headers=headers, verify=config.verify, cert=config.cert)
