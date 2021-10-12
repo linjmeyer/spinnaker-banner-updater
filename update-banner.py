@@ -8,7 +8,7 @@ applications = applications_response.json()
 apps_filtered = []
 
 for app in applications:
-    if config.filter in app["name"]:
+    if not config.filter or config.filter in app["name"]:
         apps_filtered.append(app)
         print("Considering application " + app["name"])
 
