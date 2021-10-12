@@ -1,8 +1,6 @@
 import gate
 import config
 
-filter = "awsdotnetcoredogfood"
-
 applications_response = gate.gate_request("/applications/")
 applications_response.raise_for_status()
 applications = applications_response.json()
@@ -10,7 +8,7 @@ applications = applications_response.json()
 apps_filtered = []
 
 for app in applications:
-    if filter in app["name"]:
+    if config.filter in app["name"]:
         apps_filtered.append(app)
         print("Considering application " + app["name"])
 
