@@ -63,3 +63,7 @@ def update_banners(app_name, banners):
         "description": "Update Application Banner: " + app_name
     }
     gate_request(uri="/tasks", method="POST", data=json.dumps(task), headers={"content-type": "application/json"})
+
+def update_pipeline(pipeline):
+    gate_request(uri="/pipelines", method="POST", data=json.dumps(pipeline), headers={"content-type": "application/json"})
+
