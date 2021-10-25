@@ -1,6 +1,6 @@
 # Spinnaker Banner Updater
 
-A quick script for rotating banners on Spinnaker applications in bulk using Python
+Some quick scripts for disabling triggers and adding banners to Spinnaker applications and pipelines.
 
 ## Auth
 
@@ -8,7 +8,7 @@ Supports x509 auth
 
 ## Use
 
-`python3 update-banner.py`
+`python3 update-banner.py` or `python3 disable-triggers.py`
 
 ## Config
 
